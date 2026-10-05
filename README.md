@@ -1,110 +1,154 @@
-<![CDATA[# 🌿 Rosemary — Jurnal Botani & Panduan Budidaya
+# 🌿 Rosemary — Jurnal Botani & Panduan Budidaya
 
-Website eksplorasi interaktif tentang tanaman **Rosemary** (*Salvia rosmarinus*): dari satu stek batang kecil hingga semak rimbun berbunga lilac. Menampilkan scroll-driven video hero, parallax showcase, panduan budidaya, dan checklist perawatan interaktif.
+Website eksplorasi interaktif tentang tanaman **Rosemary** (*Salvia rosmarinus*): dari satu stek batang kecil hingga semak rimbun berbunga lilac. Menampilkan *scroll-driven video hero*, *parallax showcase*, panduan budidaya bertahap, dan checklist perawatan mingguan interaktif.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
-![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat&logo=greensock&logoColor=black)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
+[![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=black)](https://gsap.com/)
+[![Lenis](https://img.shields.io/badge/Lenis-black?style=for-the-badge&logoColor=white)](https://lenis.darkroom.engineering/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
+---
+
+## 📑 Daftar Isi
+
+- [Fitur Utama](#-fitur-utama)
+- [Tech Stack](#️-tech-stack)
+- [Menjalankan Lokal](#-menjalankan-lokal)
+- [Struktur Project](#-struktur-project)
+- [Design System](#-design-system)
+- [Navigasi Keyboard](#️-navigasi-keyboard)
+- [Lisensi](#-lisensi)
 
 ---
 
 ## ✨ Fitur Utama
 
-- **Scroll-Driven Video Hero** — Video tanaman rosemary yang di-scrub mengikuti scroll, dilengkapi virtual camera (zoom, drift, roll) dan 4 narasi fase pertumbuhan bertransisi sinematik
-- **Parallax Showcase** — Kartu profil aroma dengan efek parallax gambar dan glassmorphism overlay
-- **Journey Panel** — Stacking curtain parallax yang menampilkan siklus pertumbuhan 4 babak
-- **Panduan Budidaya** — 5 langkah praktis menanam rosemary dari stek, dengan parallax background
-- **Koleksi Kuliner** — Resep dan khasiat herbal rosemary dalam format kartu editorial
-- **Checklist Interaktif** — Jurnal perawatan mingguan dengan progress bar dan penyimpanan status di `localStorage`
-- **Intro Overlay** — Animasi pembuka dengan loading bar dan reveal bertahap
-- **Keyboard Navigation** — `Space` / `Shift+Space` untuk navigasi antar fase hero dan section
-- **Smooth Scroll** — Powered by Lenis untuk pengalaman scroll yang halus
-- **Accessibility** — Semantic HTML, `aria-label`, `aria-hidden`, dan dukungan `prefers-reduced-motion`
-- **Responsive** — Adaptif untuk desktop dan mobile
+- 🎥 **Scroll-Driven Video Hero** — Video pertumbuhan rosemary yang di-scrub presisi mengikuti scroll pengguna, dipadukan dengan *virtual camera* (zoom, drift, roll) serta 4 narasi fase pertumbuhan bertransisi sinematik:
+  1. *Fase 01: Stek Batang & Perakaran Awal*
+  2. *Fase 02: Pertumbuhan Vegetatif Cepat*
+  3. *Fase 03: Pembungaan Lilac Musim Semi*
+  4. *Fase 04: Pemanenan & Semak Dewasa*
+- 🧭 **Journey Siklus Hidup** — Transisi *stacking curtain parallax* yang menyajikan tahapan siklus hidup tanaman secara mendalam.
+- 🍃 **Aroma Showcase & Varietas** — Galeri kartu profil aroma dan visual botani dengan efek *depth parallax* dan *glassmorphism*.
+- 📖 **Panduan 5 Langkah Budidaya** — Panduan praktis bertahap mulai dari pemilihan stek, media tanam berpasir, intensitas sinar matahari, teknik penyiraman, hingga pemangkasan rutin.
+- 🍳 **Koleksi Kuliner & Khasiat** — Kartu editorial resep (*Rosemary-Infused Olive Oil*, *Garlic & Rosemary Roasted Potatoes*) serta manfaat kesehatan dan aromaterapi.
+- 📋 **Checklist Perawatan Mingguan** — Jurnal perawatan interaktif dengan bilah progres real-time dan penyimpanan status otomatis via `localStorage`.
+- 🎬 **Intro Overlay & Loading Reveal** — Layar pembuka elegan dengan progress loading dan transisi halus ke halaman utama.
+- ⌨️ **Navigasi Keyboard Cepat** — Navigasi antar fase hero dan section cukup dengan tombol spasi.
+- 🌊 **Smooth Scroll** — Didukung oleh engine Lenis untuk pergerakan halaman yang ultra-halus dan responsif.
+- ♿ **Aksesibilitas & Inklusivitas** — Menggunakan HTML semantik, atribut ARIA, serta kepatuhan penuh terhadap media query `prefers-reduced-motion`.
+
+---
 
 ## 🛠️ Tech Stack
 
 | Teknologi | Fungsi |
 |---|---|
-| [Vite](https://vite.dev/) | Build tool & dev server |
-| [GSAP](https://gsap.com/) | Animasi scroll-driven, timeline, SplitText |
-| [Lenis](https://lenis.darkroom.engineering/) | Smooth scroll engine |
-| Vanilla CSS | Design system dengan custom properties |
+| [Vite](https://vite.dev/) | Bundler modern & local development server |
+| [GSAP](https://gsap.com/) & ScrollTrigger | Timeline animasi, scrub video hero, dan scroll animations |
+| [Lenis](https://lenis.darkroom.engineering/) | Smooth scrolling engine |
+| Vanilla CSS | Design system kustom dengan CSS custom properties, glassmorphism, dan fluid typography |
+| Semantic HTML5 | Struktur web yang aksesibel dan SEO-friendly |
+
+---
 
 ## 🚀 Menjalankan Lokal
 
-**Prasyarat:** [Node.js](https://nodejs.org/) versi 18+
+### Prasyarat
+Pastikan Anda telah menginstal [Node.js](https://nodejs.org/) (versi 18 ke atas) dan [Git](https://git-scm.com/).
+
+### Langkah Instalasi
 
 ```bash
-# Clone repository
-git clone https://github.com/<username>/rosemary.git
+# 1. Clone repository
+git clone https://github.com/Eguh27/rosemary.git
+
+# 2. Masuk ke direktori project
 cd rosemary
 
-# Install dependencies
+# 3. Install dependencies
 npm install
 
-# Jalankan dev server
+# 4. Jalankan server pengembangan lokal
 npm run dev
 ```
 
-Buka `http://localhost:5173` di browser.
+Buka URL yang ditampilkan di terminal (biasanya `http://localhost:5173`) di peramban favorit Anda.
 
-### Build untuk Production
+### Build untuk Produksi
 
 ```bash
+# Membuat bundle produksi
 npm run build
+
+# Meninjau bundle produksi secara lokal
 npm run preview
 ```
 
+---
+
 ## 📁 Struktur Project
 
-```
+```text
 rosemary/
-├── index.html                  # Entry HTML utama
-├── package.json
+├── index.html                  # Entry point HTML utama & konten semantik
+├── package.json                # Dependencies & script project
 ├── public/
-│   ├── favicon.svg             # Favicon ikon rosemary
-│   ├── icons.svg               # SVG sprite icons
+│   ├── favicon.svg             # Favicon botani vektor
+│   ├── icons.svg               # SVG icon sprite
 │   └── media/
-│       ├── hero.mp4            # Video hero scroll-driven
-│       ├── rosemary_*.jpg      # Foto editorial (3 file)
+│       ├── hero.mp4            # Video resolusi tinggi untuk scroll-driven hero
+│       ├── rosemary_*.jpg      # Foto editorial kuliner & botani
 │       └── draft/
-│           └── k1-k7.webp      # Gambar parallax showcase (7 file)
+│           └── k1-k7.webp      # Gambar webp teroptimasi untuk parallax showcase
 └── src/
-    ├── main.js                 # Entry JS, orchestrator semua modul
-    ├── config.js               # Konfigurasi navigasi keyboard
-    ├── styles.css              # Seluruh CSS & design system
+    ├── main.js                 # Entry script, inisialisasi & orkestrasi modul
+    ├── config.js               # Konfigurasi pintasan keyboard & timing
+    ├── styles.css              # Design system, CSS variables, typography & layout
     └── modules/
-        ├── smooth.js           # Inisialisasi Lenis smooth scroll
-        ├── navbar.js           # Navbar scroll state & anchor navigation
-        ├── hero.js             # Hero video scrub timeline & virtual camera
-        ├── reveal.js           # Scroll-triggered reveal animations
-        ├── parallax.js         # Parallax images & journey stacking panels
-        └── checklist.js        # Checklist interaktif dengan localStorage
+        ├── smooth.js           # Konfigurasi Lenis smooth scroll
+        ├── navbar.js           # Scroll state & navigasi anchor navbar
+        ├── hero.js             # Scrub video hero, virtual camera & subtitle timeline
+        ├── reveal.js           # ScrollTrigger reveal animations
+        ├── parallax.js         # Parallax gambar galeri & stacking journey panels
+        └── checklist.js        # Logika checklist interaktif & localStorage
 ```
+
+---
 
 ## 🎨 Design System
 
-Website menggunakan CSS custom properties yang terorganisir:
+Website dibangun dengan arsitektur CSS kustom yang kohesif:
 
-- **Palette** — Botanical color scheme: moss, sage, paper, lilac, amber, copper
-- **Typography** — Young Serif (display), Playfair Display (editorial), Plus Jakarta Sans (body), Courier Prime (mono)
-- **Spacing** — Skala konsisten dari `xs` hingga `3xl`
-- **Motion** — Custom easing curves dan duration tokens
-- **Components** — Glassmorphism cards, frosted navbar, parallax cards, metric grids
+- **Color Palette** — Terinspirasi warna botani Mediterania:
+  - `Moss` (`#2d4a22`), `Sage` (`#879f80`), `Lilac` (`#b8a9c9`), `Amber` (`#d4a373`), `Paper` (`#fbf8f3`), `Earth` (`#1c2826`).
+- **Typography** — Kombinasi font editorial dan modern:
+  - *Young Serif* (Judul hero & display)
+  - *Playfair Display* (Editorial & aksen)
+  - *Plus Jakarta Sans* (Teks isi & antarmuka)
+  - *Courier Prime* (Label teknis & metadata botani)
+- **Glassmorphism & Lighting** — Efek blur dan border transparan halus untuk kartu informasi.
+- **Motion Principles** — Kurva easing natural (`cubic-bezier`), micro-interactions pada tombol dan kartu.
 
-## ⌨️ Keyboard Shortcuts
+---
 
-| Tombol | Fungsi |
+## ⌨️ Navigasi Keyboard
+
+| Tombol | Tindakan |
 |---|---|
-| `Space` | Maju ke fase berikutnya (di hero) / section berikutnya |
-| `Shift + Space` | Mundur ke fase sebelumnya / section sebelumnya |
+| <kbd>Space</kbd> | Melompat maju ke fase berikutnya (di hero) atau seksi berikutnya |
+| <kbd>Shift</kbd> + <kbd>Space</kbd> | Melompat mundur ke fase sebelumnya atau seksi sebelumnya |
+
+---
+
+## 📄 Lisensi
+
+Didistribusikan di bawah Lisensi MIT. Lihat berkas `LICENSE` untuk informasi lebih lanjut.
 
 ---
 
 <p align="center">
-  <sub>© 2026 Rosemary Educational Compendium · Dibangun dengan GSAP, Lenis & Vite</sub>
+  Dibuat dengan dedikasi botani oleh <a href="https://github.com/Eguh27">Eguh27</a><br>
+  <sub>© 2026 Rosemary Educational Compendium · Powered by GSAP, Lenis & Vite</sub>
 </p>
-]]>
