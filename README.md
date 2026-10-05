@@ -1,4 +1,4 @@
-# 🌿 Rosemary — Jurnal Botani & Panduan Budidaya
+# 🌿 Rosemary
 
 Website eksplorasi interaktif tentang tanaman **Rosemary** (*Salvia rosmarinus*): dari satu stek batang kecil hingga semak rimbun berbunga lilac. Menampilkan *scroll-driven video hero*, *parallax showcase*, panduan budidaya bertahap, dan checklist perawatan mingguan interaktif.
 
