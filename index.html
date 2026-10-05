@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rosemary (Salvia rosmarinus) — Jurnal Botani & Panduan Budidaya</title>
+  <meta name="description" content="Eksplorasi interaktif tanaman rosemary: dari satu stek batang kecil hingga semak rimbun berbunga lilac. Panduan budidaya, profil aroma, dan inspirasi kuliner.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  
+  <!-- Typography: Young Serif, Playfair Display, Plus Jakarta Sans, Courier Prime -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Figtree:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Young+Serif&display=swap" rel="stylesheet">
+
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+
+<!-- Intro Overlay (muncul saat pertama kali dibuka) -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__inner">
+    <svg viewBox="0 0 24 40" width="22" height="38" aria-hidden="true">
+      <path d="M12 38V6" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none">
+        <path d="M12 12l-7-4M12 12l7-4M12 19l-8-4M12 19l8-4M12 26l-8-4M12 26l8-4M12 33l-6-3M12 33l6-3"/>
+      </g>
+    </svg>
+    <div class="intro__title">Rosemary</div>
+    <div class="intro__sub">Jurnal Botani & Panduan Budidaya</div>
+    <div class="intro__bar"><span></span></div>
+  </div>
+</div>
+
+<!-- NAVBAR (Glass / Backdrop Blur) -->
+<header class="nav" data-nav>
+  <a class="nav__brand" href="#hero" aria-label="Rosemary, kembali ke atas">
+    <svg viewBox="0 0 24 40" width="13" height="22" aria-hidden="true">
+      <path d="M12 38V6" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none">
+        <path d="M12 12l-7-4M12 12l7-4M12 19l-8-4M12 19l8-4M12 26l-8-4M12 26l8-4M12 33l-6-3M12 33l6-3"/>
+      </g>
+    </svg>
+    <span>Rosemary</span>
+  </a>
+
+  <nav class="nav__links" aria-label="Navigasi utama">
+    <a href="#tentang">Taksonomi</a>
+    <a href="#aroma">Aroma</a>
+    <a href="#perjalanan">Pertumbuhan</a>
+    <a href="#menanam">Menanam</a>
+    <a href="#kuliner">Kuliner</a>
+    <a href="#perawatan">Checklist</a>
+  </nav>
+
+  <a href="#menanam" class="nav__badge">
+    <span class="nav__badge-pip"></span>
+    <span>Panduan Tanam</span>
+  </a>
+</header>
+
+<main>
+  <!-- HERO SECTION: Video scrub, virtual camera, 4-step narrative -->
+  <section id="hero" class="hero" data-hero>
+    <!-- Sticky viewport: seluruh elemen hero dipin di sini selama range scroll -->
+    <div class="hero__sticky">
+    <!-- Scrubbed video -->
+    <video class="hero__video" src="/media/hero.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+    
+    <!-- Video enhancement overlays -->
+    <div class="hero__video-overlay" aria-hidden="true"></div>
+    
+    <!-- Atmospheric lighting overlay: morning sunlight + dark gradient -->
+    <div class="hero__shade"></div>
+    <div class="hero__vignette" aria-hidden="true"></div>
+    <div class="hero__sun-glow" aria-hidden="true"></div>
+    <div class="hero__particles" aria-hidden="true"></div>
+
+    <!-- HUD Botanical Specimen Meta Bar (tag) -->
+    <div class="hero__hud-tag" aria-hidden="true">ARCHIVUM BOTANICUM · SPECIMEN NO. 042</div>
+
+    <!-- Shade kanan untuk teks HUD meta -->
+    <div class="hero__shade-right" aria-hidden="true"></div>
+
+    <!-- Meta pills (Famili, Asal, dst) -->
+    <div class="hero__hud-pills" aria-hidden="true">
+      <span class="hud-pill">Famili: Lamiaceae</span>
+      <span class="hud-pill">Asal: Pesisir Mediterania</span>
+      <span class="hud-pill">Cahaya: 6–8 Jam Pagi</span>
+      <span class="hud-pill">Aroma: Pinus & Woody</span>
+    </div>
+
+    <!-- 4-Step Narrative Text Panels (Masked & Position-synced) -->
+    <div class="hero__steps">
+      <article class="step" data-step>
+        <span class="step__phase">FASE 01 · PEMBIBITAN AWAL</span>
+        <h1>Rosemary</h1>
+        <p>Dimulai dari satu stek batang kecil di pot terakota. Disiram lembut dan disinari hangatnya mentari pagi, gulir perlahan untuk menyaksikan keajaiban pertumbuhannya.</p>
+      </article>
+
+      <article class="step" data-step>
+        <span class="step__phase">FASE 02 · MINGGU KE-3</span>
+        <h2>Tunas & Akar Baru</h2>
+        <p>Akar adventif mulai mencengkeram pasir porus. Cabang baru tumbuh tegak menyongsong cahaya jendela, menandai adaptasi tanaman yang berhasil.</p>
+      </article>
+
+      <article class="step" data-step>
+        <span class="step__phase">FASE 03 · BULAN KE-6</span>
+        <h2>Rimbun Melimpah</h2>
+        <p>Semak hijau lebat tumpah melampaui bibir pot terakota. Daun jarumnya tebal, wangi tajam, dan sarat cadangan minyak esensial beraroma segar.</p>
+      </article>
+
+      <article class="step" data-step>
+        <span class="step__phase">FASE 04 · TAHUN KE-1</span>
+        <h2>Mekar Bunga Lilac</h2>
+        <p>Kuncup bunga biru-keunguan mekar semarak di pucuk ranting. Pertanda tanaman sehat, betah, dan siap dipetik untuk mengharumkan hidangan dapur Anda.</p>
+      </article>
+    </div>
+
+    <!-- Stage Indicators (Interactive Scrubber Dots) -->
+    <nav class="hero__stages" aria-label="Lompat ke fase pertumbuhan">
+      <button class="stage-btn is-active" data-stage-btn="0" aria-label="Fase 1: Stek Batang">
+        <span class="stage-btn__dot"></span>
+        <span class="stage-btn__label">01 Stek Batang</span>
+      </button>
+      <button class="stage-btn" data-stage-btn="1" aria-label="Fase 2: Tunas & Akar">
+        <span class="stage-btn__dot"></span>
+        <span class="stage-btn__label">02 Tunas & Akar</span>
+      </button>
+      <button class="stage-btn" data-stage-btn="2" aria-label="Fase 3: Rimbun Daun">
+        <span class="stage-btn__dot"></span>
+        <span class="stage-btn__label">03 Rimbun Daun</span>
+      </button>
+      <button class="stage-btn" data-stage-btn="3" aria-label="Fase 4: Bunga Lilac">
+        <span class="stage-btn__dot"></span>
+        <span class="stage-btn__label">04 Bunga Lilac</span>
+      </button>
+    </nav>
+
+    <!-- Scroll Down Indicator -->
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <div class="scroll-mouse">
+        <span class="scroll-wheel"></span>
+      </div>
+      <span>Gulir ke bawah untuk memutar waktu</span>
+    </div>
+
+    <!-- Timeline scrub progress line -->
+    <div class="hero__progress" aria-hidden="true"><span></span></div>
+
+    <!-- Organic Botanical Wave SVG Divider to blend Hero Video seamlessly into Web Body -->
+    <div class="hero__divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,36 C320,105 660,18 980,72 C1160,102 1340,65 1440,50 L1440,120 L0,120 Z" fill="rgba(250, 250, 246, 0.35)"/>
+        <path d="M0,62 C280,18 620,98 940,42 C1140,6 1320,54 1440,46 L1440,120 L0,120 Z" fill="rgba(250, 250, 246, 0.65)"/>
+        <path d="M0,82 C360,28 720,112 1080,56 C1240,28 1360,64 1440,70 L1440,120 L0,120 Z" fill="var(--paper)"/>
+      </svg>
+    </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: TENTANG & ANATOMI (Archival Specimen Spread) -->
+  <section id="tentang" class="block block--paper">
+    <div class="wrap">
+      <div class="section-badge" data-reveal>
+        <span class="badge-dot"></span>
+        <span>TAKSONOMI & KARAKTERISTIK BOTANI</span>
+      </div>
+
+      <div class="specimen-spread" data-reveal-group>
+        <!-- Left: Archival Herbarium Specimen Plate -->
+        <div class="specimen-card" data-reveal>
+          <div class="specimen-card__mat">
+            <div class="specimen-card__frame">
+              <img src="/media/rosemary_vintage_botanical.jpg" alt="Ilustrasi pelat botani Salvia rosmarinus beranotasi" class="specimen-card__image">
+              <div class="specimen-card__stamp">
+                <span>HERBARIUM MEDITERRANEUM</span>
+                <strong>SPECIMEN NO. 042</strong>
+              </div>
+            </div>
+            <div class="specimen-card__legend">
+              <span class="taxon-tag">Folium: Daun Jarum Berlapis Lilin</span>
+              <span class="taxon-tag">Flos: Bunga Lilac Bilabiatus</span>
+              <span class="taxon-tag">Caulis: Batang Semi-Kayu</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Editorial Narrative & Fact Cards -->
+        <div class="specimen-narrative" data-reveal>
+          <h2>Embun Laut dari Tebing Karang Mediterania</h2>
+          <p class="lead-text">
+            Nama <em>Salvia rosmarinus</em> berakar dari bahasa Latin kuno <strong>ros</strong> (embun) dan <strong>marinus</strong> (laut). Semak harum ini tumbuh liar di lereng tebing berbatu menghadap laut lepas, bertahan dari hempasan angin garam asin serta terik kemarau panjang.
+          </p>
+
+          <div class="metric-grid">
+            <article class="metric-card">
+              <div class="metric-card__value">94%</div>
+              <div class="metric-card__label">Toleransi Kekeringan</div>
+              <p>Struktur daun jarum sempit berlapis kutikula lilin meminimalkan kehilangan uap air di bawah terik mentari.</p>
+            </article>
+
+            <article class="metric-card">
+              <div class="metric-card__value">1.8% – 2.5%</div>
+              <div class="metric-card__label">Kandungan Minyak Atsiri</div>
+              <p>Sarat dengan asam rosmarinat, flavonoid, dan antioksidan yang melindungi sel dan memberi aroma khas.</p>
+            </article>
+
+            <article class="metric-card">
+              <div class="metric-card__value">18°C – 28°C</div>
+              <div class="metric-card__label">Suhu Tumbuh Optimal</div>
+              <p>Menyukai kehangatan subtropis dengan ventilasi udara segar yang leluasa dan kelembapan rendah.</p>
+            </article>
+
+            <article class="metric-card">
+              <div class="metric-card__value">6.0 – 7.5</div>
+              <div class="metric-card__label">pH Media Tanam</div>
+              <p>Tumbuh paling subur pada media gembur netral hingga sedikit berkapur dengan drainase bebas genangan.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: SHOWCASE 4 FASE & PROFIL AROMA (Parallax Photo Stream) -->
+  <section id="aroma" class="block block--aroma-showcase">
+    <!-- Ambient Botanical Backdrops -->
+    <div class="aroma-ambient" aria-hidden="true">
+      <div class="ambient-glow ambient-glow--1"></div>
+      <div class="ambient-glow ambient-glow--2"></div>
+    </div>
+
+    <div class="wrap">
+      <div class="section-badge section-badge--light" data-reveal>
+        <span class="badge-dot badge-dot--amber"></span>
+        <span>KIMIAWI & SIKLUS PERTUMBUHAN AROMA</span>
+      </div>
+
+      <div class="lead" data-reveal-group>
+        <h2 data-reveal>Sains & Sensori di Balik Wangi Rosemary</h2>
+        <p data-reveal>Evolusi aroma rosemary dari potongan stek mungil hingga mahkota bunga mekar, dipicu perpaduan senyawa terpene murni yang tersimpan dalam kelenjar daun jarumnya.</p>
+      </div>
+
+      <div class="parallax-showcase" data-reveal-group>
+        <!-- Item 1: k1.jpg (Fase 1 · Stek Batang · 1,8-Cineole) -->
+        <article class="parallax-card" data-parallax-item data-reveal>
+          <div class="parallax-card__media">
+            <img src="/media/draft/k1.webp" alt="Fase 01: Stek Batang Rosemary di Pot Terakota" data-parallax-img loading="lazy">
+            <div class="parallax-card__overlay"></div>
+          </div>
+          <div class="parallax-card__frame">
+            <div class="glass-pill">
+              <span class="glass-pill__phase">FASE 01 · PEMBIBITAN</span>
+              <span class="glass-pill__chem">38% Konsentrasi</span>
+            </div>
+            <h3 class="glass-title">1,8-Cineole (Eucalyptol)</h3>
+            <div class="glass-bar" aria-label="Konsentrasi 38%"><span style="width: 76%"></span></div>
+            <p class="glass-desc">
+              Memberi kesegaran kamfer semerbak yang membuka saluran pernapasan dan menstimulasi kewaspadaan mental saat stek ranting pertama berakar di pot terakota.
+            </p>
+            <div class="glass-meta">
+              <span class="glass-tag">Efek: Fokus & Kejernihan</span>
+              <span class="glass-char">Karakter: Segar & Dingin</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 2: k2.jpg (Fase 2 · Tunas Muda · Alpha-Pinene) -->
+        <article class="parallax-card" data-parallax-item data-reveal>
+          <div class="parallax-card__media">
+            <img src="/media/draft/k2.webp" alt="Fase 02: Tunas dan Akar Baru Rosemary" data-parallax-img loading="lazy">
+            <div class="parallax-card__overlay"></div>
+          </div>
+          <div class="parallax-card__frame">
+            <div class="glass-pill">
+              <span class="glass-pill__phase">FASE 02 · MINGGU KE-3</span>
+              <span class="glass-pill__chem">32% Konsentrasi</span>
+            </div>
+            <h3 class="glass-title">Alpha-Pinene (Aroma Pinus)</h3>
+            <div class="glass-bar" aria-label="Konsentrasi 32%"><span style="width: 64%"></span></div>
+            <p class="glass-desc">
+              Karakter pinus segar khas hutan tebing Mediterania. Berkhasiat menenangkan sistem saraf dan meredakan kelelahan saat tunas cabang baru tumbuh aktif.
+            </p>
+            <div class="glass-meta">
+              <span class="glass-tag">Efek: Relaksasi Saraf</span>
+              <span class="glass-char">Karakter: Hutan Pinus</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 3: k3.jpg (Fase 3 · Semak Rimbun · Camphor) -->
+        <article class="parallax-card" data-parallax-item data-reveal>
+          <div class="parallax-card__media">
+            <img src="/media/draft/k3.webp" alt="Fase 03: Semak Rosemary Rimbun Melimpah" data-parallax-img loading="lazy">
+            <div class="parallax-card__overlay"></div>
+          </div>
+          <div class="parallax-card__frame">
+            <div class="glass-pill">
+              <span class="glass-pill__phase">FASE 03 · BULAN KE-6</span>
+              <span class="glass-pill__chem">18% Konsentrasi</span>
+            </div>
+            <h3 class="glass-title">Camphor (Resin Kayu)</h3>
+            <div class="glass-bar" aria-label="Konsentrasi 18%"><span style="width: 36%"></span></div>
+            <p class="glass-desc">
+              Aroma resin kayu herbal yang tebal dan hangat. Melindungi dedaunan rimbun dari serangga serta menjadi inti wangi aromaterapi yang tahan lama.
+            </p>
+            <div class="glass-meta">
+              <span class="glass-tag">Efek: Proteksi Alami</span>
+              <span class="glass-char">Karakter: Hangat & Berkayu</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 4: k4.jpg (Fase 4 · Bunga Lilac · Borneol & Caryophyllene) -->
+        <article class="parallax-card" data-parallax-item data-reveal>
+          <div class="parallax-card__media">
+            <img src="/media/draft/k4.webp" alt="Fase 04: Rosemary Mekar Bunga Lilac" data-parallax-img loading="lazy">
+            <div class="parallax-card__overlay"></div>
+          </div>
+          <div class="parallax-card__frame">
+            <div class="glass-pill">
+              <span class="glass-pill__phase">FASE 04 · TAHUN KE-1</span>
+              <span class="glass-pill__chem">12% Konsentrasi</span>
+            </div>
+            <h3 class="glass-title">Borneol & Caryophyllene</h3>
+            <div class="glass-bar" aria-label="Konsentrasi 12%"><span style="width: 24%"></span></div>
+            <p class="glass-desc">
+              Kekayaan aroma earthy rempah yang mendalam saat kuncup bunga biru lilac bermekaran semarak di pucuk ranting, menandai kematangan sempurna siap panen.
+            </p>
+            <div class="glass-meta">
+              <span class="glass-tag">Efek: Kehangatan Batin</span>
+              <span class="glass-char">Karakter: Earthy Spice</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Pairing Callout Box with Frosted Glass -->
+      <div class="pairing-box pairing-box--glass" data-reveal>
+        <div class="pairing-box__content">
+          <h4>Harmoni Rasa & Aroma di Meja Kuliner</h4>
+          <p>Kombinasi keempat senyawa ini menjadikan rosemary paduan sempurna untuk marinasi daging, focaccia panggang, minyak zaitun extra-virgin, hingga seduhan teh herbal lemon madu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: PERJALANAN TUMBUH (4-Stage Growth Cycle · Stacking Curtain Parallax) -->
+  <section id="perjalanan" class="journey-stack">
+    <div class="journey-stack__intro">
+      <div class="wrap">
+        <div class="section-badge section-badge--light" data-reveal>
+          <span class="badge-dot badge-dot--amber"></span>
+          <span>KRONOLOGI WAKTU & BIOLOGI</span>
+        </div>
+
+        <div class="lead" data-reveal-group>
+          <h2 data-reveal>Perjalanan 4 Babak Kehidupan Rosemary</h2>
+          <p data-reveal>Dari potongan stek ranting kecil di pot tanah liat hingga mahkota semak rimbun yang bermekaran bunga. Gulir perlahan untuk menyusuri tiap babaknya.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="journey-panels">
+      <!-- Panel 1 -->
+      <article class="journey-panel journey-panel--1" data-journey-panel>
+        <div class="journey-panel__media">
+          <img class="journey-panel__bg" src="/media/draft/k6.webp" alt="Siklus pertumbuhan rosemary dalam satu semak rimbun" loading="lazy">
+        </div>
+        <div class="journey-panel__vignette"></div>
+        <div class="journey-panel__content">
+          <div class="wrap">
+            <div class="journey-panel__glass">
+              <div class="glass-pill">
+                <span class="glass-pill__phase">SIKLUS 4 BABAK · SETAHUN</span>
+                <span class="glass-pill__spec">STEK → MEKAR</span>
+              </div>
+              <h3 class="glass-title">Stek, Tunas, Rimbun, Lilac</h3>
+              <p class="glass-desc">Satu ranting semi-kayu menjalani empat babak: berakar dalam dua pekan, menumbuhkan tunas pertama di minggu ke-3, memayungi tajuk rimbun di bulan ke-6, lalu mekar bunga lilac semarak pada tahun pertama.</p>
+              <div class="glass-meta">
+                <span class="glass-tag">Penanda: Mekar Setelah 12 Bulan</span>
+                <span class="glass-char">Durasi: 1 Tahun Penuh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: MASTERCLASS MENANAM (5 Langkah Praktis) -->
+  <section id="menanam" class="block block--moss block--photo">
+    <div class="moss-photo" aria-hidden="true">
+      <img src="/media/draft/k5.webp" alt="" data-parallax-bg loading="lazy">
+    </div>
+    <div class="moss-photo__shade" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="section-badge section-badge--light" data-reveal>
+        <span class="badge-dot badge-dot--amber"></span>
+        <span>PANDUAN BUDIDAYA PRAKTIS</span>
+      </div>
+
+      <div class="lead" data-reveal-group>
+        <h2 data-reveal>Cara Menanam Rosemary dari Stek</h2>
+        <p data-reveal>Lima pilar utama keberhasilan menanam rosemary di rumah. Kuncinya sederhana: pastikan akar tidak pernah terendam air.</p>
+      </div>
+
+      <div class="guide-grid" data-reveal-group>
+        <article class="guide-card" data-reveal>
+          <div class="guide-card__step">LANGKAH 1</div>
+          <h3>Pilih Stek Semi-Kayu</h3>
+          <p>Potong ranting 8–10 cm yang lentur (tidak terlalu tua atau terlalu muda). Kupas daun di 3 cm bagian pangkal dengan gunting tajam bersih.</p>
+          <div class="guide-card__tip"> Tips: Stek lebih cepat dan pasti berhasil dibanding biji.</div>
+        </article>
+
+        <article class="guide-card" data-reveal>
+          <div class="guide-card__step">LANGKAH 2</div>
+          <h3>Pot Terakota & Media Porus</h3>
+          <p>Pilih pot tanah liat berlubang drainase besar. Gunakan campuran tanah gembur, pasir malang, dan perlite (rasio 2:1:1) agar air cepat lolos.</p>
+          <div class="guide-card__tip"> Tips: Terakota menjaga akar tetap dingin dan bernapas.</div>
+        </article>
+
+        <article class="guide-card" data-reveal>
+          <div class="guide-card__step">LANGKAH 3</div>
+          <h3>Teknik Siram 'Soak & Dry'</h3>
+          <p>Siram sampai air mengalir tuntas keluar dari lubang bawah pot. Biarkan 2–3 cm permukaan tanah mengering sebelum menyiram kembali.</p>
+          <div class="guide-card__tip"> Tips: Rosemary lebih tahan haus daripada becek.</div>
+        </article>
+
+        <article class="guide-card" data-reveal>
+          <div class="guide-card__step">LANGKAH 4</div>
+          <h3>Sinar Penuh 6–8 Jam</h3>
+          <p>Taruh di tempat terang teduh selama 1–2 minggu pertama, lalu pindahkan ke lokasi yang mendapat sinar matahari langsung minimal 6 jam per hari.</p>
+          <div class="guide-card__tip"> Tips: Sinar pagi merangsang sintesis minyak atsiri.</div>
+        </article>
+
+        <article class="guide-card" data-reveal>
+          <div class="guide-card__step">LANGKAH 5</div>
+          <h3>Pemangkasan Rutin (Pruning)</h3>
+          <p>Pangkas pucuk ranting 2–3 cm secara berkala setelah tanaman tumbuh aktif. Pemangkasan memicu dua cabang baru dan mencegah batang mengayu botak.</p>
+          <div class="guide-card__tip"> Tips: Jangan memotong hingga ke bagian kayu tua yang kering.</div>
+        </article>
+      </div>
+
+      <!-- Golden Caution Alert Box -->
+      <div class="alert-box" data-reveal>
+        <div class="alert-box__icon"></div>
+        <div class="alert-box__text">
+          <h4>*Waspadai Pembusukan Akar (Root Rot)</h4>
+          <p>Musuh terbesar rosemary adalah genangan air di alas pot. Jika daun mulai menguning lembek dari pangkal bawah, kurangi penyiraman dan pastikan drainase pot tidak tersumbat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: KOLEKSI KULINER & KHASIAT HERBAL -->
+  <section id="kuliner" class="block block--paper">
+    <div class="wrap">
+      <div class="section-badge" data-reveal>
+        <span class="badge-dot"></span>
+        <span>GASTRONOMI & APOTEK ALAMI</span>
+      </div>
+
+      <div class="lead" data-reveal-group>
+        <h2 data-reveal>Dari Pot Jendela ke Meja Hidangan</h2>
+        <p data-reveal>Rosemary bukan sekadar tanaman hias, melainkan rempah adidaya di dapur dan obat herbal berharga warisan Mediterania.</p>
+      </div>
+
+      <div class="culinary-grid" data-reveal-group>
+        <!-- Card 1: Roasted Potatoes -->
+        <article class="culinary-card" data-reveal>
+          <div class="culinary-card__media">
+            <img src="/media/rosemary_potatoes.jpg" alt="Kentang panggang berbalut rosemary segar dan bawang putih di wajan skillet">
+            <span class="culinary-badge">Resep Klasik</span>
+          </div>
+          <div class="culinary-card__body">
+            <h3>Rosemary Garlic Roasted Potatoes</h3>
+            <p>Kentang baby dipanggang garing di wajan besi cor (cast iron skillet) bersama minyak zaitun extra virgin, garam laut kasar, dan taburan daun rosemary segar yang melepaskan aroma harum saat terkena panas api.</p>
+            <ul class="culinary-list">
+              <li>Minyak zaitun extra virgin & bawang putih utuh</li>
+              <li>Daun rosemary segar dipetik langsung</li>
+              <li>Panggang pada suhu 200°C selama 35 menit</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Card 2: Essential Oil -->
+        <article class="culinary-card" data-reveal>
+          <div class="culinary-card__media">
+            <img src="/media/rosemary_oil.jpg" alt="Botol penetes kaca berisi minyak atsiri rosemary murni dan ranting segar">
+            <span class="culinary-badge">Apotek Botani</span>
+          </div>
+          <div class="culinary-card__body">
+            <h3>Minyak Atsiri & Distilasi Alami</h3>
+            <p>Minyak esensial murni yang diekstrak melalui distilasi uap ranting berbunga. Kaya senyawa 1,8-cineole yang dikenal luas berkhasiat melancarkan sirkulasi kulit kepala serta mempertajam konsentrasi saat bekerja.</p>
+            <ul class="culinary-list">
+              <li>Stimulasi folikel rambut & kesegaran kulit kepala</li>
+              <li>Aromaterapi pelepas lelah & stres kognitif</li>
+              <li>Antiseptik dan pereda nyeri otot alami</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Card 3: Herbal Tea & Infusion -->
+        <article class="culinary-card" data-reveal>
+          <div class="culinary-card__media">
+            <img src="/media/draft/k7.webp" alt="Botol penetes kaca berisi minyak atsiri rosemary murni dan ranting segar">
+            <span class="culinary-badge">Apotek Botani</span>
+          </div>
+          <div class="culinary-card__body">
+            <h3>Seduhan Teh Rosemary & Lemon Madu</h3>
+            <p>Ritual sore Mediterania: seduh dua tangkai rosemary segar dalam air panas 90°C selama 5 menit. Tambahkan perasan lemon segar dan sesendok madu hutan untuk tonik pencernaan berantioksidan tinggi.</p>
+            <ul class="culinary-list">
+              <li>Kaya asam karnosat pelindung sel tubuh</li>
+              <li>Meredakan perut kembung & memperlancar cerna</li>
+              <li>Minuman hangat tanpa kafein yang menenangkan</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: INTERACTIVE CARE CHECKLIST (Jurnal Perawatan Mingguan) -->
+  <section id="perawatan" class="block block--moss block--photo">
+    <div class="moss-photo" aria-hidden="true">
+      <img src="/media/draft/k4.webp" alt="" data-parallax-bg loading="lazy">
+    </div>
+    <div class="moss-photo__shade" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="section-badge section-badge--light" data-reveal>
+        <span class="badge-dot badge-dot--amber"></span>
+        <span>JURNAL KEBUN INTERAKTIF</span>
+      </div>
+
+      <div class="lead" data-reveal-group>
+        <h2 data-reveal>Checklist Perawatan Mingguan</h2>
+        <p data-reveal>Gunakan lembar kerja interaktif ini untuk memantau rutinitas perawatan tanaman rosemary Anda. Klik setiap tugas yang telah Anda selesaikan.</p>
+      </div>
+
+      <div class="checklist-card" data-checklist-container data-reveal>
+        <div class="checklist-card__header">
+          <div>
+            <h3 class="checklist-card__title">Rutinitas Mingguan Tanaman</h3>
+            <p class="checklist-card__desc" data-checklist-message>Mulai checklist minggu ini untuk menjaga rosemary Anda tetap prima.</p>
+          </div>
+          <div class="checklist-card__status">
+            <span class="status-counter" data-checklist-count>0 / 5 Tugas Selesai</span>
+            <button type="button" class="status-reset" data-checklist-reset title="Reset checklist minggu baru">Reset Minggu</button>
+          </div>
+        </div>
+
+        <div class="checklist-card__progressbar">
+          <div class="progressbar-fill" data-checklist-bar style="width: 0%"></div>
+        </div>
+
+        <ul class="checklist__items">
+          <li class="checklist__item">
+            <label class="custom-checkbox">
+              <input type="checkbox" aria-label="Periksa kelembapan media tanam sedalam 3 cm">
+              <span class="checkmark"></span>
+            </label>
+            <div class="checklist__text">
+              <strong>Uji Kelembapan Tanah (Finger Test)</strong>
+              <span>Tusukkan jari sedalam 3 cm ke media tanam. Jika terasa masih lembap, tunda penyiraman 1–2 hari lagi.</span>
+            </div>
+          </li>
+
+          <li class="checklist__item">
+            <label class="custom-checkbox">
+              <input type="checkbox" aria-label="Putar posisi pot 90 derajat">
+              <span class="checkmark"></span>
+            </label>
+            <div class="checklist__text">
+              <strong>Putar Orientasi Pot 90°</strong>
+              <span>Putar pot secara berkala agar seluruh sisi kanopi rosemary menerima pencahayaan matahari yang seimbang.</span>
+            </div>
+          </li>
+
+          <li class="checklist__item">
+            <label class="custom-checkbox">
+              <input type="checkbox" aria-label="Pangkas 2-3 pucuk ranting muda">
+              <span class="checkmark"></span>
+            </label>
+            <div class="checklist__text">
+              <strong>Pemangkasan Pucuk (Tip Pinching)</strong>
+              <span>Petik atau potong 2 cm pucuk ranting tertinggi untuk merangsang percabangan ganda baru di ketiak daun.</span>
+            </div>
+          </li>
+
+          <li class="checklist__item">
+            <label class="custom-checkbox">
+              <input type="checkbox" aria-label="Bersihkan daun gugur di pangkal batang">
+              <span class="checkmark"></span>
+            </label>
+            <div class="checklist__text">
+              <strong>Sanitasi Permukaan Media</strong>
+              <span>Ambil daun jarum yang mengering di atas media tanam agar sirkulasi udara di pangkal batang tetap lancar.</span>
+            </div>
+          </li>
+
+          <li class="checklist__item">
+            <label class="custom-checkbox">
+              <input type="checkbox" aria-label="Pastikan lubang drainase pot lancar">
+              <span class="checkmark"></span>
+            </label>
+            <div class="checklist__text">
+              <strong>Cek Sirkulasi & Drainase Pot</strong>
+              <span>Pastikan lubang bawah pot terakota tidak tersumbat akar atau endapan pasir saat disiram.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: NEWSLETTER & BOTANICAL COLOPHON -->
+  <section class="block block--paper block--colophon">
+    <div class="wrap">
+      <div class="newsletter-card" data-reveal>
+        <div class="newsletter-card__content">
+          <span class="taxon-tag">JURNAL HERBARIUM BULANAN</span>
+          <h2>Dapatkan Catatan Tanam & Resep Musiman</h2>
+          <p>Bergabunglah dengan para penanam herba rumahan. Dapatkan tips budidaya Mediterania, kalender pemangkasan, dan variasi racikan kuliner langsung di surel Anda.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Terima kasih! Anda telah terdaftar dalam Jurnal Herbarium Rosemary.');">
+            <input type="email" placeholder="Masukkan alamat surel Anda..." required aria-label="Alamat email untuk newsletter">
+            <button type="submit">Daftar Jurnal</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Formal Botanical Taxonomy Table -->
+      <div class="colophon-table" data-reveal>
+        <div class="colophon-table__item"><span>Regnum</span><strong>Plantae</strong></div>
+        <div class="colophon-table__item"><span>Cladus</span><strong>Tracheophytes</strong></div>
+        <div class="colophon-table__item"><span>Ordo</span><strong>Lamiales</strong></div>
+        <div class="colophon-table__item"><span>Familia</span><strong>Lamiaceae</strong></div>
+        <div class="colophon-table__item"><span>Genus</span><strong>Salvia</strong></div>
+        <div class="colophon-table__item"><span>Species</span><strong>Salvia rosmarinus</strong></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div class="foot__brand">
+      <svg viewBox="0 0 24 40" width="16" height="28" aria-hidden="true">
+        <path d="M12 38V6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none">
+          <path d="M12 12l-7-4M12 12l7-4M12 19l-8-4M12 19l8-4M12 26l-8-4M12 26l8-4M12 33l-6-3M12 33l6-3"/>
+        </g>
+      </svg>
+      <span>Rosemary (Salvia rosmarinus) — Folia Botanica Specimen No. 042</span>
+    </div>
+    <p>© 2026 Rosemary Educational Compendium. Dikembangkan dengan animasi scroll-driven berbasis GSAP, Lenis & Vite.</p>
+  </div>
+</footer>
+
+</body>
+</html>
